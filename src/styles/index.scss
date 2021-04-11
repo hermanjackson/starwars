@@ -1,3 +1,25 @@
 /* 
     General Styles
 */
+.cardRow {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap:nowrap;
+    
+    
+}
+.row.cardrow {
+    box-shadow: 1px 1px 10px #999;
+    margin: 2px;
+   
+   
+   // display:inline-block;
+   // vertical-align:top;
+ }
+ .fa-heart{
+     float: right;
+ }
+ .btn-secondary{
+     float: right;
+ }
+ 
