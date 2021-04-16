@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+	const { actions, store } = useContext(Context);
 
 	return (
 		<div className="container">
@@ -21,7 +21,7 @@ export const Home = () => {
 										<button type="button" className="btn btn-primary btn-sm">
 											learn more
 										</button>
-										<i className="far fa-heart" />
+										<i className="far fa-heart" onClick={() => actions.addFavorites(item)} />
 									</p>
 								</div>
 							</div>

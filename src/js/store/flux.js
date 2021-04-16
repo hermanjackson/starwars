@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			favorites: [],
 			people: [
 				{
 					uid: "1",
@@ -170,20 +171,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			changeColor: (index, color) => {
-				//get the store
+			addFavorites: data => {
 				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+				//let newFavorites = store.favorites.push(data);
 
 				//reset the global store
-				setStore({ demo: demo });
+				setStore({ favorites: [...store.favorites, data] });
+			},
+			removeFavorites: index => {
+				const store = getStore();
+
+				let favorites = store.favorites.filter((item, i) => i !== index);
+
+				//reset the global store
+				setStore({ favorites: favorites });
 			}
+		},
+		changeColor: (index, color) => {
+			//get the store
+			const store = getStore();
+
+			//we have to loop the entire demo array to look for the respective index
+			//and change its color
+			const demo = store.demo.map((elm, i) => {
+				if (i === index) elm.background = color;
+				return elm;
+			});
+
+			//reset the global store
+			setStore({ demo: demo });
 		}
 	};
 };
