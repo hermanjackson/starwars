@@ -47,7 +47,13 @@ export const Single = props => {
 								</div>
 								<div className="col-12 col-md-6">
 									<h1 className="display-4">{store[mytype][currentID].name}</h1>
-									<p>i never seen start wars</p>
+									<p>
+										Bacon ipsum dolor amet prosciutto cupim filet mignon, pork chop pastrami shank
+										chislic ham chicken venison doner. Boudin frankfurter tail swine. Turkey strip
+										steak chicken kielbasa buffalo, pastrami pig. Strip steak spare ribs ham hock
+										pig burgdoggen turkey . Bacon chuck ribeye, brisket bresaola pork chop sirloin
+										spare ribs ham tongue t-bone turkey.{" "}
+									</p>
 								</div>
 							</div>
 							{mytype === "people" && <PersonStats url={store[mytype][currentID].url} />}

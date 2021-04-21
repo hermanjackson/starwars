@@ -18,9 +18,12 @@ export const Home = () => {
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text">
-										<button type="button" className="btn btn-primary btn-sm">
-											learn more
-										</button>
+										<Link to={"/people/" + item.uid}>
+											<button type="button" className="btn btn-primary btn-sm">
+												learn more
+											</button>
+										</Link>
+
 										<i className="far fa-heart" onClick={() => actions.addFavorites(item)} />
 									</p>
 								</div>
@@ -39,10 +42,12 @@ export const Home = () => {
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text">
-										<button type="button" className="btn btn-primary btn-sm">
-											learn more
-										</button>
-										<i className="far fa-heart" />
+										<Link to={"/vehicles/" + item.uid}>
+											<button type="button" className="btn btn-primary btn-sm">
+												learn more
+											</button>
+										</Link>
+										<i className="far fa-heart" onClick={() => actions.addFavorites(item)} />
 									</p>
 								</div>
 							</div>
@@ -60,10 +65,12 @@ export const Home = () => {
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text">
-										<button type="button" className="btn btn-primary btn-sm">
-											learn more
-										</button>
-										<i className="far fa-heart" />
+										<Link to={"/planets/" + item.uid}>
+											<button type="button" className="btn btn-primary btn-sm">
+												learn more
+											</button>
+										</Link>
+										<i className="far fa-heart" onClick={() => actions.addFavorites(item)} />
 									</p>
 								</div>
 							</div>
