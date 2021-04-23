@@ -8,15 +8,18 @@ export const MyNavbar = () => {
 	return (
 		<Navbar bg="light">
 			<Container fluid>
-				<Navbar.Brand href="/" as={Link}>
-					<img
-						alt=""
-						src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG3.png"
-						width="30"
-						height="30"
-						className="d-inline-block align-top"
-					/>
-				</Navbar.Brand>
+				<Link to={"/single"}>
+					<Navbar.Brand href="/" as={Link}>
+						<img
+							alt=""
+							src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG3.png"
+							width="30"
+							height="30"
+							className="d-inline-block align-top"
+							role="button"
+						/>
+					</Navbar.Brand>
+				</Link>
 				<Dropdown className=" floatend" alignRight>
 					<Dropdown.Toggle variant="primary" id="dropdown-basic">
 						Favorites

@@ -27,28 +27,28 @@ export const PlanetStats = props => {
 			{planet !== null && (
 				<>
 					<div className="col-12 col-md-2">
-						<h3>Height</h3>
-						<p>{planet.height}</p>
+						<h3>Planet Name</h3>
+						<p>{planet.name}</p>
 					</div>
 					<div className="col-12 col-md-2">
-						<h3>Mass</h3>
-						<p>{planet.mass}</p>
+						<h3>edited</h3>
+						<p>{planet.edited}</p>
 					</div>
 					<div className="col-12 col-md-2">
-						<h3>Hair Color</h3>
-						<p>{planet.hair_color}</p>
+						<h3>planet climate</h3>
+						<p>{planet.climate}</p>
 					</div>
 					<div className="col-12 col-md-2">
-						<h3>Eye Color</h3>
-						<p>{planet.eye_color}</p>
+						<h3>planet population</h3>
+						<p>{planet.population}</p>
 					</div>
 					<div className="col-12 col-md-2">
-						<h3>Birth Year</h3>
-						<p>{planet.birth_year}</p>
+						<h3>planet diameter</h3>
+						<p>{planet.diameter}</p>
 					</div>
 					<div className="col-12 col-md-2">
-						<h3>Gender</h3>
-						<p>{planet.gender}</p>
+						<h3>planet terrain</h3>
+						<p>{planet.terrain}</p>
 					</div>
 				</>
 			)}
